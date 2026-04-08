@@ -9,37 +9,24 @@ cursor location.
 
 ### User Edits:
 
-User edited crates/edit_prediction_ui/src/rate_prediction_modal.rs:
+User edited app/utils.py:
 ```diff
-@@ -144,7 +144,7 @@
-     fn select_next_edit(&mut self, _: &NextEdit, _: &mut Window, cx: &mut Context<Self>) {
-+        epr
-         let next_index = self
+@@ -5,3 +5,4 @@
+ def get_users(db):
+     users = db.query(User).all()
++    pri
+     return users
 ```
 
 ### User Excerpt:
 
-```crates/edit_prediction_ui/src/rate_prediction_modal.rs
-    fn select_next_edit(&mut self, _: &NextEdit, _: &mut Window, cx: &mut Context<Self>) {
+```app/utils.py
 <|editable_region_start|>
-        epr<|user_cursor_is_here|>
-        let next_index = self
-            .ep_store
-            .read(cx)
-            .shown_predictions()
-            .skip(self.selected_index)
-            .enumerate()
-            .skip(1)
-            .find(|(_, completion)| !completion.edits.is_empty())
-            .map(|(ix, _)| ix + self.selected_index);
-
-        if let Some(next_index) = next_index {
-            self.selected_index = next_index;
-            cx.notify();
-        }
-    }
+def get_users(db):
+    users = db.query(User).all()
+    pri<|user_cursor_is_here|>
+    return users
 <|editable_region_end|>
-    fn select_prev_edit(&mut self, _: &PreviousEdit, _: &mut Window, cx: &mut Context<Self>) {
 ```
 
 ### Response:

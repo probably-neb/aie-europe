@@ -13,6 +13,10 @@
 
 ## Unrelated changes
 
+- Predicts calling `do_sometheing_else`
+- Also fixes whitespace!
+- Can be avoided by not rewriting the editable region
+
 Editable region:
 ```Python
   def foo():
@@ -24,6 +28,7 @@ Editable region:
 ```
 
 ## Ignoring Editable Region Boundaries
+
 
 ```Python
 -def fibonacci(n):
