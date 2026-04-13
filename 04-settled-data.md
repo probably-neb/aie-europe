@@ -2,7 +2,7 @@
 
 ## The user eventually writes the "answer"
 
-- Buffer state settles after editing — known-good ground truth
+- wait for prediction region to "settle"
 - very noisy
 - Generate 50 student predictions or 10 teacher predictions per example
 - Compare against settled state to find matches
